@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.RegisterFragment"
+    android:orientation="vertical"
+    android:weightSum="100.0">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30.0"
+        android:src="@drawable/cart" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_gravity="center">
+
+           <TextView
+               android:id="@+id/signUpText"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:text="Sign Up"
+               android:textStyle="bold"
+               android:layout_marginBottom="@dimen/_16sdp"
+               android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
+
+           <LinearLayout
+               android:id="@+id/basicData"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:padding="@dimen/_16sdp">
+
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="@dimen/_16sdp"
+                   android:hint="Name"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                   app:boxStrokeColor="@color/colorAccent">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/name"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:inputType="text" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="@dimen/_16sdp"
+                   android:hint="Mobile"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/phone"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:inputType="phone" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="@dimen/_16sdp"
+                   android:hint="Email"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/email"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:inputType="textEmailAddress" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.button.MaterialButton
+                   android:id="@+id/next"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Next"
+                   android:padding="@dimen/_5sdp"
+                   android:textAllCaps="false"
+                   android:layout_gravity="right"
+                   android:backgroundTint="@color/colorAccent"
+                   android:textColor="@android:color/black"
+                   android:layout_marginBottom="@dimen/_16sdp"/>
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/idData"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:padding="@dimen/_16sdp"
+               android:visibility="gone">
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="@dimen/_16sdp"
+                   android:hint="DOB"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/dob"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:inputType="date" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="@dimen/_16sdp"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                   android:hint="Doc ID"
+                   app:boxStrokeColor="@color/colorAccent">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/docId"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:inputType="text" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="@dimen/_16sdp"
+                   android:hint="DocType"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/docType"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:inputType="text" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <com.google.android.material.button.MaterialButton
+                       android:id="@+id/prev"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Prev"
+                       android:padding="@dimen/_5sdp"
+                       android:textAllCaps="false"
+                       android:layout_alignParentStart="true"
+                       android:layout_alignParentLeft="true"
+                       android:backgroundTint="@color/colorAccent"
+                       style="@style/Widget.MaterialComponents.Button.TextButton"
+                       android:textColor="@android:color/black"
+                       android:layout_marginBottom="@dimen/_16sdp"/>
+
+                   <com.google.android.material.button.MaterialButton
+                       android:id="@+id/register"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentEnd="true"
+                       android:layout_alignParentRight="true"
+                       android:text="Register"
+                       android:textAllCaps="false"
+                       android:padding="@dimen/_5sdp"
+                       android:backgroundTint="@color/colorAccent"
+                       android:textColor="@android:color/black"
+                       android:layout_marginBottom="@dimen/_16sdp"/>
+               </RelativeLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/otpForm"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:padding="@dimen/_16sdp"
+               android:layout_gravity="center"
+               android:visibility="gone">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:text="Please Verify your Number"
+                   android:textStyle="bold"
+                   android:layout_marginBottom="@dimen/_16sdp"
+                   android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="@dimen/_16sdp"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                   app:boxStrokeColor="@color/colorAccent">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/otp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:inputType="text" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.button.MaterialButton
+                   android:id="@+id/resend"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Resend"
+                   android:layout_gravity="right"
+                   android:padding="@dimen/_10sdp"
+                   style="@style/Widget.MaterialComponents.Button.TextButton"
+                   android:textColor="@android:color/black"
+                   android:layout_marginBottom="@dimen/_16sdp"/>
+
+               <com.google.android.material.button.MaterialButton
+                   android:id="@+id/veriy"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Veriy"
+                   android:padding="@dimen/_10sdp"
+                   android:backgroundTint="@color/colorAccent"
+                   android:textColor="@android:color/black"
+                   android:layout_marginBottom="@dimen/_16sdp"/>
+
+           </LinearLayout>
+
+           <ProgressBar
+               android:id="@+id/loading"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="@dimen/_5sdp"
+               android:visibility="gone"
+               android:layout_marginBottom="@dimen/_5sdp"/>
+
+       </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="10.0"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an Account?"
+            android:gravity="center" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:text="Sign In" />
+
+    </LinearLayout>
+
+</LinearLayout>
